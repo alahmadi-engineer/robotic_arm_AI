@@ -32,7 +32,7 @@ $ catkin_make
 
 $ cd ~/catkin_ws/src
 
-7- colone and install the packages from the git hub of smart methods company
+7- clone and install the packages from the git hub of smart methods company
 
 $ git clone https://github.com/smart-methods/arduino_robot_arm.git 
 
@@ -42,7 +42,7 @@ $ rosdep install --from-paths src --ignore-src -r -y
 
 $ sudo apt-get install ros-melodic-moveit
 
-$ sudo apt-get install ros-melodic-joint-state-publisher ros-kinetic-joint-state-publisher-gui
+$ sudo apt-get install ros-melodic-joint-state-publisher ros-melodic-joint-state-publisher-gui
 
 $ sudo apt-get install ros-melodic-gazebo-ros-control joint-state-publisher
 
