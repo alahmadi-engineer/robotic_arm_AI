@@ -1,0 +1,62 @@
+steps to install ros melodic on ubuntue and boosting the package arm of "smart-methods" company:
+
+section A: set up linux operating system in your windows pc
+
+1-download and install virtual box from their official site: 
+https://www.virtualbox.org/
+
+2-download ubuntu 18.04 LTS from their official site:
+https://ubuntu.com/download/desktop
+
+3- open virtualbox, create new virtual machine and choose linux to be the operating system.
+Note: choose the ubuntu file that you have downloaded in step 2
+
+4-proceede with the installation of the new virtual machine until you do it successfully.
+Note: this youtube video will help you in installing the virtual machine "steps 1 to 4"
+https://www.youtube.com/watch?v=JgurvumloHk&list=LLf9qDvHgerdJOHG4mKnz90w&index=8
+
+section B: download robot operating system and "smart methods"'s company packages
+
+5- download ros by following the instructions in the link:
+http://wiki.ros.org/melodic/Installation/Ubuntu
+
+6- download catkin by typing the following commands in order:
+
+$ sudo apt-get install ros-melodic-catkin
+
+$ mkdir -p ~/catkin_ws/src
+
+$ cd ~/catkin_ws/
+
+$ catkin_make
+
+$ cd ~/catkin_ws/src
+
+7- colone and install the packages from the git hub of smart methods company
+
+$ git clone https://github.com/smart-methods/arduino_robot_arm.git 
+
+$ cd ~/catkin_ws
+
+$ rosdep install --from-paths src --ignore-src -r -y
+
+$ sudo apt-get install ros-melodic-moveit
+
+$ sudo apt-get install ros-melodic-joint-state-publisher ros-kinetic-joint-state-publisher-gui
+
+$ sudo apt-get install ros-melodic-gazebo-ros-control joint-state-publisher
+
+$ sudo apt-get install ros-melodic-ros-controllers ros-melodic-ros-control
+
+$ sudo nano ~/.bashrc
+
+at the end of the (bashrc) file add the follwing line
+(source /home/wesam/catkin_ws/devel/setup.bash)
+then 
+ctrl + o
+
+$ source ~/.bashrc
+
+8- launch the package
+
+$ roslaunch robot_arm_pkg check_motors.launch
