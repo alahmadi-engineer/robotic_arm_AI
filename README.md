@@ -1,1 +1,1 @@
-# robotic_arm_AI
+here i will present the artificial inteeligence aspects of a robotic arm
